@@ -3,35 +3,39 @@ import '../constants/app_colors.dart';
 
 class AlGhadLogoBadge extends StatelessWidget {
   final double size;
-  const AlGhadLogoBadge({super.key, this.size = 205});
+  const AlGhadLogoBadge({super.key, this.size = 210});
 
   @override
   Widget build(BuildContext context) {
-    // شعار كلية الغد الدولية داخل الدائرة المعتمدة
     return Container(
       width: size,
       height: size,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         shape: BoxShape.circle,
-        boxShadow: [
+        color: AppColors.white,
+        border: Border.all(
+          color: AppColors.orange, // #D39706
+          width: 4.0,
+        ),
+        boxShadow: const [
           BoxShadow(
-            color: Color(0x33D49B23),
+            color: Color(0x66D39706),
             blurRadius: 24,
-            spreadRadius: 2,
+            spreadRadius: 3,
           ),
           BoxShadow(
-            color: Colors.black54,
-            blurRadius: 20,
-            offset: Offset(0, 10),
+            color: Colors.black45,
+            blurRadius: 18,
+            offset: Offset(0, 8),
           ),
         ],
       ),
-      child: Center(
-        child: Image.asset(
-          'assets/images/logo.png',
-          fit: BoxFit.contain,
-          errorBuilder: (context, error, stackTrace) => const _FallbackMedallionLogo(),
-        ),
+      padding: const EdgeInsets.all(18.0),
+      child: Image.asset(
+        'assets/images/logo.png',
+        fit: BoxFit.contain,
+        alignment: Alignment.center,
+        errorBuilder: (context, error, stackTrace) => const _FallbackMedallionLogo(),
       ),
     );
   }
