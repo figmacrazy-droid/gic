@@ -1,0 +1,6 @@
+{
+  "name": "كلية الغد الدولية",
+  "description": "تطبيق كلية الغد الدولية للعلوم الصحية والتقنية - شاشات الترحيب وتسجيل الدخول بتصميم مطابق تماماً",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

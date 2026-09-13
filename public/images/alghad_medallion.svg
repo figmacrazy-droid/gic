@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" width="280" height="280">
+  <defs>
+    <!-- Outer Gold Ring Gradient -->
+    <linearGradient id="medallionGoldRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5C752" />
+      <stop offset="20%" stop-color="#D9A122" />
+      <stop offset="55%" stop-color="#B88212" />
+      <stop offset="85%" stop-color="#E2AC2B" />
+      <stop offset="100%" stop-color="#F7CE65" />
+    </linearGradient>
+
+    <!-- Shield Gold Gradient -->
+    <linearGradient id="shieldGoldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EDB73B" />
+      <stop offset="25%" stop-color="#D9A122" />
+      <stop offset="65%" stop-color="#BE8914" />
+      <stop offset="90%" stop-color="#DDA727" />
+      <stop offset="100%" stop-color="#F5C34D" />
+    </linearGradient>
+
+    <!-- Clip path defining the interior of the shield -->
+    <clipPath id="innerShieldClip">
+      <path d="M 43 59 Q 130 37 217 59 C 221 63 223 68 223 74 L 223 152 C 223 202 166 244 130 262 C 94 244 37 202 37 152 L 37 74 C 37 68 39 63 43 59 Z" />
+    </clipPath>
+
+    <!-- Parchment/Cream Gradient for Lower Section -->
+    <linearGradient id="creamArchGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F0EBDD" />
+      <stop offset="100%" stop-color="#E6DFCC" />
+    </linearGradient>
+  </defs>
+
+  <!-- 1. Outermost Sleek Gold Ring (#D49B23 / #EDB73B) -->
+  <circle cx="140" cy="140" r="133" fill="none" stroke="url(#medallionGoldRing)" stroke-width="4.8" />
+
+  <!-- 2. Concentric Dark Navy Spacer Band (#07192F) -->
+  <circle cx="140" cy="140" r="126" fill="none" stroke="#07192F" stroke-width="5.2" />
+
+  <!-- 3. Pure Crisp White Circular Disc (#FFFFFF) -->
+  <circle cx="140" cy="140" r="121" fill="#FFFFFF" />
+
+  <!-- 4. College Shield Centered Inside the White Disc -->
+  <g transform="translate(140, 140) scale(0.70) translate(-130, -156)">
+    <!-- Outermost Rich Gold Shield Frame -->
+    <path
+      d="M 28 44 Q 130 18 232 44 C 239 48 243 56 243 66 L 243 158 C 243 218 178 266 130 286 C 82 266 17 218 17 158 L 17 66 C 17 56 21 48 28 44 Z"
+      fill="url(#shieldGoldGradient)"
+      stroke="#A5730C"
+      stroke-width="1.2"
+    />
+
+    <!-- Middle Dark Navy Buffer Band -->
+    <path
+      d="M 33 49 Q 130 25 227 49 C 233 53 236 60 236 68 L 236 156 C 236 213 174 259 130 278 C 86 259 24 213 24 156 L 24 68 C 24 60 27 53 33 49 Z"
+      fill="#08203E"
+    />
+
+    <!-- Inner White Shield Contour Line -->
+    <path
+      d="M 38 54 Q 130 31 222 54 C 227 58 229 64 229 71 L 229 154 C 229 207 170 251 130 270 C 90 251 31 207 31 154 L 31 71 C 31 64 33 58 38 54 Z"
+      fill="#FFFFFF"
+    />
+
+    <!-- Shield Interior -->
+    <g clip-path="url(#innerShieldClip)">
+      <rect x="0" y="0" width="260" height="300" fill="#08203E" />
+
+      <!-- Lower Arched Cream/Ivory Section -->
+      <path d="M 30 152 Q 130 130 230 152 L 230 275 L 30 275 Z" fill="url(#creamArchGradient)" />
+
+      <!-- Line 1: Arabic College Title -->
+      <text x="130" y="80" text-anchor="middle" fill="#FFFFFF" font-family="'Cairo', 'Tajawal', sans-serif" font-weight="900" font-size="19" letter-spacing="0.2">كلية الغد الدولية</text>
+
+      <!-- Line 2: English College Title -->
+      <text x="130" y="97" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="8.2" letter-spacing="0.9">ALGHAD INTERNATIONAL COLLEGE</text>
+
+      <!-- Line 3: Arabic College Subtitle -->
+      <text x="130" y="122" text-anchor="middle" fill="#FFFFFF" font-family="'Cairo', 'Tajawal', sans-serif" font-weight="900" font-size="15.8" letter-spacing="0.1">للعلوم الصحية والتقنية</text>
+
+      <!-- Line 4: English College Subtitle -->
+      <text x="130" y="136" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="7.5" letter-spacing="0.7">FOR HEALTH &amp; TECHNICAL SCIENCES</text>
+
+      <!-- Calligraphic "gic" logo with Diamond Dot -->
+      <g transform="translate(130, 206)">
+        <text x="-4" y="0" text-anchor="middle" fill="#071F48" font-family="'Brush Script MT', 'Snell Roundhand', 'URW Chancery L', cursive, serif" font-style="italic" font-weight="900" font-size="62" letter-spacing="-1.5">gic</text>
+        <polygon points="7,-46 12,-41 7,-36 2,-41" fill="#071F48" />
+      </g>
+    </g>
+
+    <!-- Inner Hairline -->
+    <path
+      d="M 45 61 Q 130 39 215 61 C 219 65 221 70 221 75 L 221 150 C 221 198 165 240 130 258 C 95 240 39 198 39 150 L 39 75 C 39 70 41 65 45 61 Z"
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="0.8"
+      stroke-opacity="0.45"
+    />
+  </g>
+</svg>
